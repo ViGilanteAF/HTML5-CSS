@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="Form" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form action="login.php" method="post" autocomplete="off">
+    <fieldset>
+        <legend>개인 정보</legend>
+        <ul>
+            <li>
+                <label for="name">이름</label>
+                <input type="text" id="name">
+            </li>
+            <li>
+                <label for="mail">메일 주소</label>
+                <input type="text" id="mail">
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>로그인 정보</legend>
+     <ul>
+         <li>
+             <label for="id">아이디</label>
+             <input type="text" id = "id">
+         </li>
+         <li>
+             <label for="pw">비밀번호</label>
+             <input type="password" id = "pw">
+         </li>
+         <li>
+             <input type="submit" title= "로그인" value="로그인">
+         </li>
+     </ul>
+    </fieldset>
+     <h3>수강 분야(다수 선택 가능)</h3>
+     <ul>
+         <li> <input type="checkbox" value="grm">문법</li>
+         <li> <input type="checkbox" value="wr">작문</li>
+         <li> <input type="checkbox" value="rd">독해</li>
+     </ul>
+     <h3>수강 과목(1과목만 선택 가능)</h3>
+     <ul>
+         <li>
+             <label for=""><input type="radio" name="subject" value="eng"> 영어회화 </label>
+         </li>
+         <li>
+             <label for=""><input type="radio" name="subject" value="ch">중국어회화</label>
+         </li>
+         <li>
+             <label for=""><input type="radio" name="subject" value="jp">일어회화</label>
+         </li>
+     </ul>
+     <h3>input 태그의 type 속성에서 사용가능한 유형 </h3>
+     <ul>
+          <li><input type="hidden"> 사용자에게는 보이지 않지만 서버로 넘겨지는 값을 가짐</li>
+          <li><input type="text"> 한 줄짜리 텍스트를 입력할 수 있는 텍스트 상자를 만듬</li>
+          <li><input type="search"> 검색 상자를 만듬</li>
+          <li><input type="tel"> 전화번호 입력 필드를 만듬</li>
+          <li><input type="url">IRL 주소를 입력할 수 있는 필드를 만듬</li>
+          <li><input type="email">메일 주소를 입력할 수 있는 필드를 만듬</li>
+          <li><input type="password">비밀번호를 입력할 수 있는 필드를 만듬</li>
+          <li><input type="datetime">국제 표준시로 설정된 날짜와 시간 을 만듬</li>
+          <li><input type="datatime-local">사용자가 있는 지역을 기준으로 날짜와 시간 을 만듬</li>
+          <li><input type="date">사용자 지역을 기준으로 날짜(연, 월, 일) 를 만듬</li>
+          <li><input type="month">사용자 지역을 기준으로 날짜(연, 월)을 만듬</li>
+          <li><input type="week">사용자 지역을 기준으로 날짜(연, 주)를 만듬</li>
+          <li><input type="time">사용자 지역을 기준으로 날짜(시, 분, 초, 분할 초)를 만듬</li>
+          <li><input type="number">숫자를 조절할 수 있는 화살표를 만듬</li>
+          <li><input type="range">숫자를 조절할 수 있는 슬라이드 막대를 만듬</li>
+          <li><input type="color">색상 표 를 만듬</li>
+          <li><input type="checkbox">주어진 항목에서 2개 이상 선택 가능한 체크박스 를 만듬</li>
+          <li><input type="radio">주어진 항목에서 1개만 선택할 수 있는 라디오 버튼을 만듬</li>
+          <li><input type="file">파일을 첨부할 수 있는 버튼을 만듬</li>
+          <li><input type="submit">서버 전송 버튼을 만듬</li>
+          <li><input type="image">submit버튼 대신 사용할 이미지를 만듬</li>
+          <li><input type="reset">리셋버튼을 만듬</li>
+          <li><input type="button">버튼을 만듬</li>
+     </ul>
+     <fieldset>
+         <legend>Text필드 속성</legend>
+     <ul>
+         <li>
+             <label>아이디:<input type="text" name="id" size="10" maxlength="10" value="아이디를 입력하세요"></label>
+             <label>비밀번호:<input type="password" name="pwd" maxlength="15" size="15" ></label>
+             <input type="submit" value="로그인">
+         </li>
+     </ul>
+    </fieldset>
+    <fieldset>
+        <legend>분화된 텍스트 필드</legend>
+        <ul>
+            <li>
+                <label>검색 : <input type="search" ></label>
+                <input type="submit" value="검색">
+            </li>
+            <li>
+                <label>URL : <input type="url" value="URL 을 입력하세요"></label>
+                <input type="submit" value="이동">
+            </li>
+            <li>
+                <label>Email : <input type="email" ></label>
+            </li>
+            <li>
+                <label>전화번호 : <input type="tel" value="전화번호 만 입력하세요"></label>
+            </li>
+            <li>
+                <label >숫자 : <input type="number" value="숫자만 입력하세요" ></label>
+                <label >숫자 : <input type="number" value="1" min="1" max="5"></label>
+            </li>
+            <li>
+                <label >슬라이드 막대로 숫자 지정하기 : <input type="range" min="1" max="10" value="1"></label>
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>등록 정보</legend>
+    </fieldset>
+  </body>
+</html>
