@@ -79,6 +79,8 @@
           <li><input type="image">submit버튼 대신 사용할 이미지를 만듬</li>
           <li><input type="reset">리셋버튼을 만듬</li>
           <li><input type="button">버튼을 만듬</li>
+          <li><input type="button" value="새 탭 열기" onclick="window.open()"></li>
+          <li><input type="button" value="닫기" onclick="window.close()"></li>
      </ul>
      <fieldset>
          <legend>Text필드 속성</legend>
@@ -86,7 +88,8 @@
          <li>
              <label>아이디:<input type="text" name="id" size="10" maxlength="10" value="아이디를 입력하세요"></label>
              <label>비밀번호:<input type="password" name="pwd" maxlength="15" size="15" ></label>
-             <input type="submit" value="로그인">
+             <input type="image" id="butt" src="image/login.jpg" alt="login">
+
          </li>
      </ul>
     </fieldset>
@@ -103,6 +106,7 @@
             </li>
             <li>
                 <label>Email : <input type="email" ></label>
+
             </li>
             <li>
                 <label>전화번호 : <input type="tel" value="전화번호 만 입력하세요"></label>
@@ -145,12 +149,30 @@
         <p>메일로 받고 싶은 뉴스 주제를 선택해 주세요<small>(복수 선택 가능)</small></p>
         <label ><input type="checkbox" name="mailing" value="news">해외 단신</label>
         <label ><input type="checkbox" name="mailing" value="dialog" >5분 회화</label>
-        <label ><input type="checkbox" name="mailing" value="moningpops">모닝 팝스</label>
+        <label ><input type="checkbox" name="mailing" value="moningpops">모닝 팝스</label> <br>
+        <form action="register.php" method="post">
+            <label >메일 주소<input type="text" id="mail"></label>
+            <input type="submit" value="제출">
+            <input type="reset" value="다시 입력">
+        </form>
     </fieldset>
     <fieldset>
         <legend>과 티셔츠 설문</legend>
         <p>올해 과 티(T)를 만드려고 합니다. 원하는 색상을 추천해 주세요</p>
         <label >선호 색상 : <input type="color" value="#00ff00"></label>
+    </fieldset>
+    <fieldset>
+        <legend>조회 기간 선택</legend>
+        <label ><input type="date" id="start"></label>
+        <label ><input type="data | month | week "></label>
+    </fieldset>
+    <fieldset>
+        <h3>원하는 대관시간을 선택하세요(오늘)</h3>
+        <label>시작 시간 <input type="time" value="09:00" id="start"></label>
+        <label>종료 시간 <input type="time" value="18:00" id="end"></label>
+        <h3>대관시간을 선택하세요(다른 날짜)</h3>
+        <label>시작 시간<input type="datetime-local" value="2020-08-01T09:00" id="start"></label>
+        <label>종료 시간<input type="datetime-local" value="2020-08-01T18:00" id="end"></label>
     </fieldset>
   </body>
 </html>
