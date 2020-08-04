@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내부 스타일 시트</title>
+    <style>
+      p {
+        font-style: italic;
+        color: blue;
+      }
+      p {
+        color: red !important;
+      }
+      h1 {
+        color: blue;
+      }
+      #habor {
+        border: 1px solid gray; /*테두리 -1v픽셀짜리 회색실선*/
+        padding: 10px; /*패딩 여백 - 테두리와 내용 사이의 여백 */
+        color: green;
+      }
+      .heading {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://t1.daumcdn.net/cfile/tistory/997096335D17780E2D"
+      alt="브라질 리우데자네이루"
+    />
+    <h1 class="hading" id="habor">세계 3대 미항</h1>
+    <ul>
+      <p>시드니(Sydeny), 호주</p>
+      <p>리우데자네이루(Rio de Janeiro), 브라질</p>
+      <p>나폴리(Naples), 이탈리아</p>
+    </ul>
+  </body>
+</html>
